@@ -1,0 +1,6 @@
+<fa-app style="height: 568px; width: 320px; margin: 0;">
+  <fa-surface fa-background-color="'#FFF'"></fa-surface>
+  <fa-grid-layout fa-options="gridLayoutOptions">
+    <fa-surface ng-repeat="element in gridElements" fa-background-color="element.backgroundColor">{{element.index}}</fa-surface>
+  </fa-grid-layout>
+</fa-app>

@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="integrationApp"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" ng-app="integrationApp"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" ng-app="integrationApp"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" ng-app="integrationApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="web-fonts/open-sans.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
+        <link rel="stylesheet" href="styles/timbre.css">
+        <link rel="stylesheet" href="styles/lock-screen.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+
+
+        <!-- <object id="tuio" type="application/x-tuio" style="width: 0px; height: 0px;">
+        </object> -->
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+        <!-- TODO:  if window width is less than 385px, don't show the iphone (use media queries) -->
+        <div style="position: relative; width: 385px; margin: 0 auto;">
+            <img class="phone-frame" style="" src="images/iphone-5s-white-frame.png" />
+            <div class="phone-view-container"   ui-view></div>
+        </div>
+
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+
+        <script src="bower_components/famous/famous-global.js"></script>
+        <script src="bower_components/famous-angular/dist/famous-angular.js"></script>
+        <!-- endbower -->
+
+        <!--geoIP-->
+        <script src="//js.maxmind.com/js/country.js" type="text/javascript"></script>
+
+        <!--SCRIPTS-->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/dtdemo.js"></script>
+        <!--<script src="scripts/controllers/animate.js"></script>
+        <script src="scripts/controllers/animations.js"></script>
+        <script src="scripts/controllers/container-surface.js"></script>
+        <script src="scripts/controllers/cuboid.js"></script>
+        <script src="scripts/controllers/cuboid-field.js"></script>
+        <script src="scripts/controllers/draggable.js"></script>
+        <script src="scripts/controllers/perspective.js"></script>
+        <script src="scripts/controllers/physics.js"></script>
+        <script src="scripts/controllers/physics-particles.js"></script>
+        <script src="scripts/controllers/transitionables.js"></script>
+        <script src="scripts/controllers/flipper.js"></script>
+        <script src="scripts/controllers/ng-class.js"></script>
+        <script src="scripts/controllers/render-node.js"></script>
+        <script src="scripts/controllers/header-footer-layout.js"></script>
+        <script src="scripts/controllers/grid-layout.js"></script>
+        <script src="scripts/controllers/flexible-layout.js"></script>
+        <script src="scripts/controllers/demo.js"></script>
+        <script src="scripts/controllers/nested-scroll-view.js"></script>
+        <script src="scripts/controllers/lock-screen.js"></script>-->
+        <!--SCRIPTS END-->
+
+        <!-- requires a plugin to use: https://github.com/borismus/MagicTouch -->
+        <script src="vendor/magictouch.js"></script>
+
+    </body>
+</html>

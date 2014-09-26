@@ -1,0 +1,8 @@
+  <fa-app style="width: 320px; height: 568px;">
+    <fa-surface fa-background-color="'#073642'"></fa-surface>
+    <fa-modifier ng-repeat="circle in circles" fa-opacity="circle.opacity.get()" fa-size="[50, 50]" fa-translate="circle">
+      <fa-surface fa-animate-leave="handleExit(circle, $done)" ng-if="circle.show"  ng-click="handleClick(circle)" >
+        <div style="border: 2px solid {{colorMap[circle._id]}}; border-radius: 27px; width: 50px; height: 50px; margin: -25px 0 0 -25px;"></div>
+      </fa-surface>
+    </fa-modifier>
+  </fa-app>

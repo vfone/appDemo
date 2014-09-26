@@ -1,0 +1,21 @@
+<fa-app style="width: 320px; height: 568px; margin: 0;">
+  <!-- <fa-scroll-view fa-pipe-from="handler"> -->
+    <fa-modifier
+      fa-index="$index"
+      ng-repeat="item in items track by item.id"
+      fa-translate="[item.transX.get(), $index * 100, 1]"
+      fa-size="[undefined, 100]"
+      fa-opacity="item.opacity"
+      fa-animate-leave="leaveAnimation(item)"
+      fa-animate-enter="enterAnimation(item)" >
+      <fa-surface
+        fa-pipe-to="handler"
+        fa-click="remove($index)"
+        fa-background-color="item.bgcolor"
+        fa-color="item.color"
+        fa-padding="'40px'">
+        {{item.name}}
+      </fa-surface>
+    </fa-modifier>
+  <!-- </fa-scroll-view> -->
+</fa-app>

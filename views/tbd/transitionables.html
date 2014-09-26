@@ -1,0 +1,28 @@
+<!-- adapted from @continuata's code at https://github.com/Famous/famous-angular/issues/72  -->
+
+<fa-app style="height: 568px; width: 320px; margin: 0;">
+  <fa-modifier
+    ng-repeat="box in boxes"
+    fa-size="[250, 50]"
+    fa-translate="box.trans.get()">
+    <fa-modifier id="{{'box-' + $index}}">
+      <fa-surface
+        fa-background-color="box.bg_color"
+        fa-color="box.color"
+        fa-click="click(box)"
+        fa-size="[250, 50]">
+        <table>
+          <tr>
+            <td>
+              <input style="width: 50px" ng-model="box.bg_color"/><br>
+              <input style="width: 50px" ng-model="box.color"/>
+            </td>
+            <td align="center">
+              {{text}} {{$index + 1}}
+            </td>
+          </tr>
+        </table>
+      </fa-surface>
+    </fa-modifier>
+  </fa-modifier>
+</fa-app>

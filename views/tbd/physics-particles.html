@@ -1,0 +1,19 @@
+  <fa-app style="width: 320px; height: 568px;">
+    <fa-surface fa-background-color="'#073642'" fa-translate="[0, 0, -1]"></fa-surface>
+    <fa-grid-layout fa-options="{dimensions: gridDimensions}">
+      <fa-modifier ng-repeat="circle in circles" fa-origin="[.5, .5]">
+        <fa-modifier fa-rotate="circle" fa-translate="[0, 0, 10]">
+          <fa-surface fa-origin="[.5, .5]">
+            <div style="border: 2px solid {{colorMap[circle._id]}}; border-radius: 100px; width: {{getRadius()}}px; height: {{getRadius()}}px;"></div>
+          </fa-surface>
+          <fa-modifier fa-align="[.5, .5]" >
+            <fa-surface  fa-color="colorMap[circle._id]" fa-background-color="colorMap[circle._id]" fa-size="[2, getRadius()]"><div style="height: 100%; width: 100%;"></div>
+            </fa-surface>
+          </fa-modifier>
+        </fa-modifier>
+        <fa-modifier fa-translate="[0, 0, 11]">
+          <fa-surface fa-mouseover="mouse(circle)"></fa-surface>
+        </fa-modifier>
+      </fa-modifier>
+    </fa-grid-layout>
+  </fa-app>
